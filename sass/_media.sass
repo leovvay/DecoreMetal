@@ -1,0 +1,238 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199.98px)
+	/**/
+	
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991.98px)
+	/*.main-header*/
+	.main-header__phonebox
+		margin-left: 0
+	.main-header__logo
+			margin-right: 30px
+	.main-header__title
+		font-size: 24px
+
+	//.company
+	.company__content
+		margin-top: 90px
+		margin-bottom: 0
+	
+	.company__content
+		line-height: 30px
+
+	//form-10p
+	.form-10p__btn
+		margin: auto
+		margin-top: 20px
+	//stainless-advantages
+	.stainless-advantages__list
+		&:before
+			display: block
+
+			//reviews
+	.reviews__list
+		margin-top: 20px
+	.reviews__item
+		padding: 20px
+		p
+			margin: 20px 100px
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767.98px)
+	/**/
+	.main-header__promo
+		margin-top: 20px
+	.main-header__title
+		font-size: 20px
+	.features__item:last-child
+		display: none
+	.features__items
+		justify-content: space-around
+
+	//form-10p
+	.form-10p__icon
+		margin: auto
+		
+		width: 70%
+	.form-10p__icon:nth-child(2)
+		margin: auto
+		margin-top: 20px
+	.form-10p__input
+		width: 100%
+	//reviews
+	.reviews__list
+		margin-top: 0
+	.reviews__item
+		padding: 20px
+		p
+			margin: auto
+	.reviews__review
+		&:before
+			left: 0
+			font-size: 60px
+		&:after
+			right: 0
+			top: 55px
+			font-size: 60px
+
+		// .modal-form
+	.modal-form
+		width: 550px
+		background-size: 63%
+
+		.modal-form__form
+			width: 300px
+		.form__footer
+				display: none
+	.main-footer__phone-items
+		text-align: left
+		
+    // ================Page-Galery========================
+	
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 575.98px)
+	
+	body
+		font-size: 16px
+
+	// .mmenu
+	.mm-listview
+		padding-left: 40px
+
+		//.main-header
+	.main-header__logo
+		margin-left: 0
+		margin-bottom: 10px
+	.logo__promo
+		+vh
+	.main-header__phone-items
+		margin: auto
+
+		
+	.main-header__btn
+		margin: auto
+		margin-top: 10px
+	
+	.main-header__promo
+		max-width: 100%
+
+	.main-header__title
+		font-size: 16px
+		padding: 5px
+		max-width: 320px
+	.main-header__link-galery--konsutacia
+		display: none
+	.main-header__utp
+		font-size: 16px
+		max-width: 250px
+
+	.main-header__buttons
+		width: 100%
+		justfy-content: center
+		flex-wrap: wrap
+		margin-top: 0
+	.main-header__button
+		margin-top: 30px
+	.main-header__btn-more
+		display: none
+	.main-header__utp--sm-hidden
+		+vh
+	.main-header__features
+		margin-top: 30px
+	.main-header__utp
+		margin-top: 30px
+		//.callback
+	.callback__wrapper
+		width: 300px
+	.callback__content
+		max-width: 300px
+	.callback__content:after
+		Background-image: linear-gradient(90deg, $accent 0%, $accent 14%, transparent 14%, transparent 86%, $accent 86%, $accent 100%)
+	.callback__text 
+		display: block
+		margin-top: -8px
+		font-size: 16px
+		font-weight: 700
+		line-height: 17px
+	.callback__btn
+		padding: 8px
+		font-size: 12px
+		line-height: 14px
+		top: 0
+	
+
+		//company
+	.company__title
+		font-size: 1.4em
+	.company__item
+		margin-top: 20px
+		//form-10p
+	.form-10p__call-you
+		font-size: 12px
+	//stainless-advantages
+	.stainless-advantages__list
+		&:before
+			display: none
+
+		//reviews
+	.reviews__review
+		font-size: 14px
+		&:before
+			display: none
+		&:after
+			display: none
+
+		//feedback
+	.feedback__title
+		font-size: 22px
+		line-height: 24px
+		margin-bottom: 20px
+	.feedback__form
+		padding: 15px
+		.form__name-wrapper,
+		.form__tel-wrapper,
+		.form__email-wrapper
+			padding-left: 15px
+	
+		// main-footer
+	.main-footer
+		padding: 20px 0
+	.content-galery__title
+		font-size: 22px
+	 // .modal-form
+	.modal-form
+		width: auto
+		background-image: none
+	
+		.modal-form__form
+			width: 300px
+/*==========  Mobile First  ==========*/
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 576px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	.main-header
+			height: 42vh
+
+	.main-header-galery
+		height: auto
+	/**/
+

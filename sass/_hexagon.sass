@@ -1,0 +1,161 @@
+//example:
+//<div class="hexagon">
+//  <div class="hexTop"></div>
+//  <div class="hexBottom"></div>
+//</div>
+
+.hexagon 
+  position: absolute
+  top: 57.74px
+  left: 0px
+  width: 200px 
+  height: 115.47px
+  margin: 0
+  background-image: url(../img/metallic-effect-rotate.jpg)
+  background-color: #999
+  background-size: auto 219.3931px
+  background-position: center
+  background-transform: rotate(45deg)
+  box-shadow: 0 0 20px rgba(0,0,0,1)
+  border-left: solid 5px $accent
+  border-right: solid 5px $accent
+  text-align: left
+  z-index: 0
+
+.hexTop,
+.hexBottom 
+  position: absolute
+  z-index: 0
+  width: 141.42px
+  height: 141.42px
+  overflow: hidden
+  -webkit-transform: scaleY(0.5774) rotate(-45deg)
+  -ms-transform: scaleY(0.5774) rotate(-45deg)
+  transform: scaleY(0.5774) rotate(-45deg)
+  background: inherit
+  left: 24.29px
+  box-shadow: 0 0 20px rgba(0,0,0,1)
+
+
+/*counter transform the bg image on the caps*/
+.hexTop:after,
+.hexBottom:after 
+  content: ""
+  position: absolute
+  width: 190.0000px
+  height: 109.69655114602891px
+  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-54.8483px)
+  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-54.8483px)
+  transform:          rotate(45deg) scaleY(1.7321) translateY(-54.8483px)
+  -webkit-transform-origin: 0 0
+  -ms-transform-origin: 0 0
+  transform-origin: 0 0
+  background: inherit
+
+
+.hexTop 
+  top: -70.7107px
+  border-top: solid 7.0711px $accent
+  border-right: solid 7.0711px $accent
+
+
+.hexTop:after 
+  background-position: center top
+
+
+.hexBottom 
+  bottom: -70.7107px
+  border-bottom: solid 7.0711px $accent
+  border-left: solid 7.0711px $accent
+
+
+.hexBottom:after 
+  background-position: center bottom
+
+
+.hexagon:after 
+  content: ""
+  position: absolute
+  top: 2.8868px
+  left: 0
+  width: 190.0000px
+  height: 109.6966px
+  z-index: 2
+  background: inherit
+
+
+
+    // review
+    // 
+.hexagon-review 
+  position: relative
+  width: 100px 
+  height: 57.74px
+  margin: 28.87px 0
+  background-image: url(../img/reviews/foto-1.jpg)
+  background-size: auto 115.4701px
+  background-position: center
+  text-align: left
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  border-left: solid 2px $accent;
+  border-right: solid 2px $accent;
+
+
+.hexTop-review,
+.hexBottom-review 
+  position: absolute
+  z-index: 1
+  width: 70.71px
+  height: 70.71px
+  overflow: hidden
+  -webkit-transform: scaleY(0.5774) rotate(-45deg)
+  -ms-transform: scaleY(0.5774) rotate(-45deg)
+  transform: scaleY(0.5774) rotate(-45deg)
+  background: inherit
+  left: 12.64px
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+
+
+/*counter transform the bg image on the caps*/
+.hexTop-review:after,
+.hexBottom-review:after 
+  content: ""
+  position: absolute
+  width: 100.0000px
+  height: 57.73502691896258px
+  -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-28.8675px)
+  -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-28.8675px)
+  transform:          rotate(45deg) scaleY(1.7321) translateY(-28.8675px)
+  -webkit-transform-origin: 0 0
+  -ms-transform-origin: 0 0
+  transform-origin: 0 0
+  background: inherit
+
+
+.hexTop-review 
+  top: -35.3553px
+  border-top: solid 2.8284px $accent;
+  border-right: solid 2.8284px $accent;
+
+.hexTop-review:after 
+  background-position: center top
+
+
+.hexBottom-review 
+  bottom: -35.3553px
+  border-bottom: solid 2.8284px $accent;
+  border-left: solid 2.8284px $accent;
+
+.hexBottom-review:after 
+  background-position: center bottom
+
+
+.hexagon-review:after 
+  content: ""
+  position: absolute
+  top: 1.1547px
+  left: 0
+  width: 96.0000px
+  height: 55.4256px
+  z-index: 2
+  background: inherit

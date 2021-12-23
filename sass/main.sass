@@ -1,0 +1,1322 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "hexagon"
+
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 22px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	
+	input, textarea
+			border: #666 1px solid
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+			&:required:valid
+				border-color: green
+
+.mm-page
+	position: relative
+	
+
+
+.visually-hidden
+	position: absolute !important
+	clip: rect(1px 1px 1px 1px)
+	clip: rect(1px, 1px, 1px, 1px)
+	padding:0 !important
+	border:0 !important
+	height: 1px !important 
+	width: 1px !important 
+	overflow: hidden
+
+.btn
+  -webkit-border-radius: 4
+  -moz-border-radius: 4
+  border-radius: 4px
+  color: #F4424E
+  text-transform: uppercase
+  background: none
+  font-size: 16px
+  line-height: 18px
+  font-weight: 700
+  padding: 10px 10px 10px 10px
+  border: solid #F4424E 2px
+  text-decoration: none
+  transition: all 0.25s ease
+  text-decoration: none
+
+.btn:hover
+	cursor: pointer
+	color: $light
+	border-color: $light
+	text-decoration: none
+	
+.accent-text
+	color: $accent
+
+#my-menu 
+    background-color: $grau
+    
+
+.hamburger.hamburger--stand
+	appearance: none
+.hamburger__menu
+	position: fixed
+	top: 15px
+	left: 0
+	z-index: 100
+.logo__img--favicon
+	height: 80px
+	border: $accent 2px dotted
+	font-family: marckscript
+	font-weight: 700
+	font-size: 80px
+	line-height: 90px
+	transform: translateX(-50%)
+	cursor: context-menu
+.mm-menu .mm-navbar a, .mm-menu .mm-navbar>*
+	color: #000
+	transition: color 0.3s ease
+.mm-menu .mm-navbar a:hover, .mm-menu .mm-navbar>*:hover
+	color: rgba(0, 0, 0, 1)
+	cursor: context-menu
+.mm-navbar
+	height: auto
+	position: relative
+	border-bottom: none
+	margin-bottom: 40px
+.mm-panels>.mm-panel.mm-hasnavbar
+	padding-left: 20px
+	padding-top: 0
+
+.mm-menu .mm-selected a,
+.mm-listview>li:hover
+	color: $accent
+	transition: color 0.25s ease
+[class*=mm-menu_fx-listitems-] .mm-listitem:nth-child(1),
+[class*=mm-menu_fx-listitems-] .mm-listitem:nth-child(2),
+[class*=mm-menu_fx-listitems-] .mm-listitem:nth-child(3),
+[class*=mm-menu_fx-listitems-] .mm-listitem:nth-child(4),
+[class*=mm-menu_fx-listitems-] .mm-listitem:nth-child(5)
+	transition-delay: .01s
+.mm-menu .mm-listview>li.mm-selected>a:not(.mm-next), .mm-menu .mm-listview>li.mm-selected>span
+	background: none
+panel>.mm-listview:first-child, .mm-panels>.mm-panel>.mm-navbar+.mm-listview
+    margin-top: 0
+.mm-listview
+	padding-left: 100px	
+.main-nav__item
+	text-transform: uppercase
+.main-nav__item--home::before
+	content: "\f0a6"
+	font-family: 'fontawesome'
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	left: -15px
+	font-size: 20px
+.main-nav__item--company::before
+	content: "\f0f7 "
+	font-family: 'fontawesome'
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	left: -15px
+	font-size: 20px
+.main-nav__item--works::before
+	content: "\f0e3  "
+	font-family: 'fontawesome'
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	left: -15px
+	font-size: 20px
+.main-nav__item--reviews::before
+	content: "\f0c0"
+	font-family: 'fontawesome'
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	left: -15px
+	font-size: 20px
+.main-nav__item--contacts::before
+	content: "\f041"
+	font-family: 'fontawesome'
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	left: -10px
+	font-size: 20px
+
+.hamburger-inner,.hamburger-inner::before, .hamburger-inner::after
+	background: $accent 
+	height: 2px
+	width: 34px
+	border-radius: 0
+	z-index: 100
+
+.main-header
+	min-height: 700px
+	height: 100vh
+	background: url("../img/header/fon-header_1.jpg") #B8CACE
+	background-repeat: no-repeat
+	background-position: center
+	background-attachment: fixed
+	background-size: auto
+	position: relative
+
+.main-header__topline
+	padding-top: 20px
+	z-index: 1
+
+.main-header__logo
+	margin-left: 40px
+	display: flex
+	flex-direction: column
+
+.logo__img
+	
+	width: 190px
+	height: 53px
+	border: $accent 2px dotted
+	font-family: marckscript
+	font-weight: 700
+	font-size: 40px
+	line-height: 55px
+	margin: auto
+
+.logo__promo
+	width: 193px
+	font-size: 11px
+	font-weight: 400
+	text-align: center
+	margin: auto
+	margin-top: 10px
+	margin-bottom: 0
+	.logo__wrap
+		white-space: nowrap
+
+.main-header__phonebox
+	position: relative
+	margin-top: 0
+	margin-left: 36%
+	width: 230px
+	display: flex
+	align-items: start
+	flex-direction: column
+.main-header__phone-items
+	margin: 0
+	margin-bottom: 10px
+	position: relative
+		
+.main-header__phone-items::after
+	content: "\f095"
+	position: absolute
+	top: 50%
+	transform: translateY(-50%)
+	font-family: fontawesome
+	left: -30px
+	color: $accent
+	opacity: 0.8
+
+.main-header__btn
+	width: 190px
+	font-size: 15px
+
+	
+.main-header__phone-item
+	display: block
+	font-size: 20px
+	line-height: 22px
+	white-space: nowrap
+	text-decoration: none
+	color: #fff
+	&:hover
+		color: $accent
+		text-decoration: none
+		
+.main-header__promo
+	display: flex
+	height: 100%
+	max-width: 70%
+	margin-top: 40px
+.main-heder__center
+	margin: auto
+.main-header__title
+	margin: 0 auto
+	padding: 0
+	max-width: 545px
+	font-size: 26px
+	text-align: center
+	padding: 5px 10px
+	background-color: rgba(0, 0, 0, .5)
+	color: #fff
+		
+.caps
+	text-transform: uppercase
+.main-header__features
+	margin-top: 40px
+	display: flex
+
+.features__items
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		margin: 0
+		padding: 0
+		max-width: 555px
+		margin: auto
+
+.features__item
+	margin: 0
+	padding: 0
+	list-style: none
+	width: 140px
+	height: 40px
+	background-color: rgba(255, 255, 255, .8)
+	border-bottom-right-radius: 50px
+	border-top-right-radius: 50px
+	font-size: 18px
+	margin-top: 10px
+	padding-left: 40px
+	padding-right: 10px
+	position: relative
+	text-align: left
+	&::before
+		content: ""
+		display: block
+		width: 40px
+		height: 40px
+		position: absolute
+		left: 0
+		top: 0
+		background: url("../img/header/6-kutnik3.png")
+		background-position: center
+		background-size: cover
+	&::after
+		content: ""
+		display: block
+		width: 40px
+		height: 40px
+		position: absolute
+		left: 0
+		top: 0
+		background: url("../img/icons_sprite_2.png")
+		background-size: 340%
+	&:nth-child(1)::after
+		background-position: -70px -59px
+	&:nth-child(2)::after
+		background-position: 101px 42px
+	&:nth-child(3)::after
+		background-position: -2px 42px
+	&:nth-child(4)::after
+		background-position: 65px 76px
+	&:nth-child(5)::after
+		background-position: 99px 78px
+	&:nth-child(6)::after
+		background-position: -2px 76px
+	&:nth-child(7)::after
+		background-position: 65px 110px
+	&:nth-child(8)::after
+		background-position: 98px 9px
+	&:nth-child(9)::after
+		background-position: 134px 10px
+		
+	h6
+		display: inline-block
+		vertical-align: center
+.main-header__link-galery
+	color: #000
+	display: block
+	&:hover
+		color: $accent
+		transition: color 0.2s
+	&.main-header__link-galery--konsutacia
+	
+	
+.main-header__composition
+	text-align: center
+
+.main-header__utp
+	display: inline-block
+	margin-top: 40px
+	padding: 5px 20px
+	width: 530px
+	text-align: center
+	max-width: 400px
+	border: solid 2px $accent
+	color: $black
+.main-header__buttons
+	display: flex
+	width: 100%
+	justify-content: space-between
+	margin: auto
+	margin-top: 40px
+.main-header__button
+	margin: auto
+.main-header__btn-more
+	background: $accent
+	color: #fff
+	margin-right: 30px
+	&:hover
+		color: #fff
+		background-color: $light
+
+.company
+	padding-top: 50px
+	padding-bottom: 50px
+	text-align: center
+	background-color: rgba(17, 34, 34, .07)
+	.accent-text
+		white-space: nowrap	
+	.logo__img
+			border: none
+
+.company__list,
+.stainless-advantages__list,
+.galery__list,
+.problems__list,
+.benefits__list
+	padding: 0
+	list-style: none
+
+.company__list
+	display: flex
+	flex-wrap: wrap
+	flex-shrink: 0
+	position: relative
+	margin-bottom: 0
+
+.company__item
+	width: 252px
+	margin: auto
+	margin-top: 10px
+	margin-bottom: 10px
+	position: relative
+	.hexagon
+		left: 50%
+		transform: translateX(-50%)
+		top: 57.74px
+		
+.company__accent-text
+	font-size: 40px
+	color: #fff
+	font-weight: 700
+	margin: 0
+	margin-top: 79px
+	text-align: center
+	z-index: 2
+	position: relative
+	
+.company__content
+	font-weight: 700
+	margin-top: 105px
+		
+		
+.form-10p
+	padding: 50px 0
+	text-align: center
+	background-color: #999
+	position: relative
+	background: url(../img/form-10p/fon-form-10p.jpg)
+	background-position: center
+	background-repeat: no-repeat
+
+	color: #fff
+	+inverse
+
+.form-10p__input-wrapper
+	display: flex
+	justify-content: space-around
+	flex-wrap: wrap
+	flex-shrink: 0
+	align-items: flex-start
+
+	.form-10p__btn
+		background-color: $accent
+		margin-right: auto
+	.form-10p__btn:hover
+		color: $grau
+.form-10p__input,
+.form-10p__btn
+	width: 192px
+	height: 32px
+	box-sizing: border-box
+	padding: 0
+	margin: 0
+	background: none
+	border: 1px solid $accent
+	color: #fff
+	border-radius: 3px
+
+.form-10p__input
+	padding: 0 15px
+	padding-right: 30px
+	font-size: 16px
+
+.form-10p__icon
+	margin: 0
+	position: relative
+	line-height: 16px
+	margin-left: auto
+	&:nth-child(2)
+		margin-left: 100px
+		margin-right: 100px
+	
+.form-10p__icon:before
+	position: absolute
+	top: 8px
+	right: 5px
+	font-family: fontawesome
+	display: block
+.form-10p__icon--name:before
+	content: "\f2bd"
+.form-10p__icon--phone:before
+	content: "\f095"
+.form-10p__text
+	font-size: 16px
+	line-height: 18px
+	margin-top: 20px
+	position: relative
+
+.form-10p__call-you
+	position: relative
+	padding-left: 25px
+	text-align: center
+	
+	&::before
+		content: "\f017"
+		position: absolute
+		top: 2px
+		left: -2px
+		font-family: fontawesome
+		font-size: 25px
+		display: block
+
+		
+//callback
+.callback__wrapper
+	width: 530px
+	min-height: 90px
+	margin: auto
+	display: flex
+
+.callback__content
+	width: 530px
+	height: 85px
+	color: $black
+	margin: auto
+	font-size: 25px
+	text-align: center
+	border-left: 3px solid $accent
+	border-right: 3px solid $accent
+	border-radius: 5px
+	position: relative
+
+.callback__content::after 
+	position: absolute
+	content: ""
+	width: 100%
+	height: 3px
+	bottom: 0
+	left: 0
+	Background-image: linear-gradient(90deg, $accent 0%, $accent 20%, transparent 20%, transparent 80%, $accent 80%, $accent 100%)
+
+.callback__content::before 
+	position: absolute
+	content: ""
+	width: 100%
+	height: 3px
+	top: 0
+	left: 0
+	Background-image: linear-gradient(90deg, $accent 0%, $accent 10%, transparent 10%, transparent 90%, $accent 90%, $accent 100%)
+
+.callback__text
+  display: block
+  margin-top: -13px
+  font-size: 20px
+  font-weight: 700
+  text-align: center
+  line-height: 26px
+ 
+.callback__btn
+	position: relative
+	top: 8px
+	z-index: 2
+//callback кінець	
+
+.stainless-advantages
+	padding-top: 50px
+	padding-bottom: 50px
+	text-align: center
+	
+.stainless-advantages__list
+	display: flex
+	flex-wrap: wrap
+	flex-shrink: 0
+	position: relative
+	
+	&:before
+		content: ""
+		width: 1.5px
+		height: 95%
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		background-image: linear-gradient(transparent, $grau, $grau, transparent)
+		display: none
+.stainless-advantages__item
+	width: 252px
+	position: relative
+	margin: auto
+	margin-top: 20px
+	margin-bottom: 20px
+	.hexagon
+		background-image: none
+		background-size: auto
+		background-color: $accent
+		left: 50%
+		transform: translateX(-50%)
+		top: 57.74px
+	&::before
+			content: ""
+			width: 210px
+			height: 210px
+			display: block
+			background-size: auto 114px 
+			background-repeat: no-repeat
+			background-position: 70px 58px
+			z-index: 2
+			position: absolute
+			top: 0
+			left: 0
+	&:nth-child(1):before
+		background-image: url(../img/adwantages-stainless/econom.png)
+	&:nth-child(2):before
+		background-image: url(../img/adwantages-stainless/4.png)
+	&:nth-child(3):before
+		background-image: url(../img/adwantages-stainless/estetic.png)
+	&:nth-child(4):before
+		background-image: url(../img/adwantages-stainless/koroziyna_st.png)
+	&:nth-child(5):before
+		background-image: url(../img/adwantages-stainless/jarostiykist.png)
+	&:nth-child(6):before
+		background-image: url(../img/adwantages-stainless/micnist.png)
+.stainless-advantages__content
+	margin: 0
+	margin-top: 247px
+	font-size: 16px
+	line-height: 20px
+	.accent-text
+		display: block
+		font-size: 20px
+		line-height: 24px
+		margin-bottom: 10px
+
+.stainless-advantages__callback
+	margin-top: 40px		
+
+		
+.galery
+	padding-top: 50px
+	padding-bottom: 50px
+	text-align: center
+	position: relative
+	background-image: url(../img/galery/fon_galery.jpg)
+	background-attachment: fixed 
+	+inverse
+	&__title
+		font-size: 1.5em
+		line-height: 1.65
+		color: #fff
+	.callback__text
+		color: #fff
+.galery__list
+	display: flex
+	flex-wrap: wrap
+	flex-shrink: 0
+
+.galery__item
+	width: 200px
+	height: 230px
+	margin: auto
+	margin-top: 40px
+	position: relative
+	.hexagon
+		&:before
+			content: ""
+			width: 100%
+			height: 109.5px
+			background: rgba(0, 0, 0, .7)
+			position: absolute
+			left: 0
+			top: 3px
+			z-index: 3
+	.hexTop,
+	.hexBottom
+		&:before
+			content: ""
+			width: 100%
+			height: 100%
+			background: rgba(0, 0, 0, .7)
+			position: absolute
+			z-index: 3
+				
+	&-name
+		position: relative
+		z-index: 2
+		color: #fff	
+		top: 50%
+		transform: translateY(-50%)
+		font-size: 19px
+		padding: 0 10px
+		letter-spacing: 2px
+		display: inline-block
+
+.galery__link
+	display: block
+	position: relative
+	width: 100%
+	height: 100%
+	&:hover
+		text-decoration: none
+		.hexagon,.hexTop,.hexBottom
+			&:before
+				display: block
+				background: rgba(0, 0, 0, .4)	
+				transition: all 0.3s
+		.galery__item-name
+			
+			transition: all 0.3s
+
+.galery__item--peryla 
+	.galery__link:hover
+		.hexagon
+			background-image: url(../img/galery/intro_peryla.jpg)
+			transition: all 0.3s
+.galery__item--shody
+	.galery__link:hover
+		.hexagon
+			background-image: url(../img/galery/intro_shody.jpg)
+			transition: all 0.3s
+.galery__item--vorota
+	.galery__link:hover
+		.hexagon
+			background-image: url(../img/galery/intro_vorota.jpg)
+			transition: all 0.3s
+.galery__item--ohorojy
+	.galery__link:hover
+		.hexagon
+			background-image: url(../img/galery/intro_ohoroja.jpg)
+			transition: all 0.3s
+.galery__item--navisy
+	.galery__link:hover
+		.hexagon
+			background-image: url(../img/galery/intro_navis.jpg)
+			transition: all 0.3s
+.galery__item--mebli
+	.galery__link:hover
+		.hexagon
+			background-image: url(../img/galery/intro_mebli.jpg)
+			transition: all 0.3s
+.galery__item--drabyny
+	.galery__link:hover
+		.hexagon
+			background-image: url(../img/galery/intro_drabyna.jpg)
+			transition: all 0.3s
+.galery__item--ozdoblennya
+	.galery__link:hover
+		.hexagon
+			background-image: url(../img/galery/intro_ozdob.jpg)
+			transition: all 0.3s
+.galery__item--zvarka
+	.galery__link:hover
+		.hexagon
+			background-image: url(../img/galery/intro_zvarka.jpg)
+			transition: all 0.3s
+.galery__callback
+	margin-top: 40px
+
+.problems
+	padding-top: 50px
+	padding-bottom: 50px
+	text-align: center
+	&__title
+		font-size: 1.5em
+		line-height: 1.65
+		margin-bottom: 20px
+		display: inline-block
+	
+.problems__list
+	display: flex
+	flex-wrap: wrap
+	flex-shrink: 0
+
+.problems__item
+	width: 252px
+	min-height: 230px
+	margin: auto
+	margin-top: 20px
+	margin-bottom: 20px
+	position: relative
+	&::before
+			content: ""
+			width: 210px
+			height: 210px
+			display: block
+			background-size: auto 114px 
+			background-repeat: no-repeat
+			background-position: 70px 58px
+			z-index: 2
+			position: absolute
+			top: 0
+			left: 0
+	&:nth-child(1):before
+		background-image: url(../img/problems/vremya.png)
+	&:nth-child(2):before
+		background-image: url(../img/problems/pohana_truba.png)
+	&:nth-child(3):before
+		background-image: url(../img/problems/treschina.png)
+	&:nth-child(4):before
+		background-image: url(../img/problems/peryla_rozshatani.png)
+	&:nth-child(5):before
+		background-image: url(../img/problems/NE_HARCHOVA_TRUBA.png)
+	&:nth-child(6):before
+		background-image: url(../img/problems/pohana_truba.png)
+	.hexagon
+		left: 50%
+		transform: translateX(-50%)
+.problems__content
+	margin: 0
+	font-size: 18px
+	line-height: 22px
+	position: relative
+	z-index: 2
+	margin-top: 251px
+	padding-top: 50px
+	&:after
+		content: ""
+		width: 100%
+		height: 1px
+		background: $grau
+		position: absolute
+		top: 17px
+		left: 0
+		z-index: 0
+	.fas
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translateX(-50%)
+		font-size: 22px
+		line-height: 22px
+		display: inline-block
+		border: solid 2px $grau
+		border-radius: 100px
+		padding: 5px
+		background: $accent
+		color: #fff
+		z-index: 1
+
+.problems__callback
+	margin-top: 40px
+
+.benefits
+	padding-top: 50px
+	padding-bottom: 50px
+	text-align: center
+	background: rgba(17,34,34,.07)
+	&__title
+		font-size: 1.5em
+		line-height: 1.65
+.benefits__list
+	display: flex
+	flex-wrap: wrap
+	flex-shrink: 0
+
+.benefits__item
+	width: 252px
+	min-height: 230px
+	margin: auto
+	margin-top: 20px
+	margin-bottom: 20px
+	position: relative
+	.hexagon
+		left: 50%
+		transform: translateX(-50%)
+	&::before
+			content: ""
+			width: 210px
+			height: 210px
+			display: block
+			background-size: auto 114px 
+			background-repeat: no-repeat
+			background-position: 70px 58px
+			z-index: 2
+			position: absolute
+			top: 0
+			left: 0
+	&:nth-child(1):before
+		background-image: url(../img/benefits/shvidko.png)
+	&:nth-child(2):before
+		background-image: url(../img/benefits/sertyfikovana_truba.png)
+	&:nth-child(3):before
+		background-image: url(../img/benefits/nadiyno.png)
+	&:nth-child(4):before
+		background-image: url(../img/benefits/poruchya.png)
+	&:nth-child(5):before
+		background-image: url(../img/benefits/eco.png)
+	&:nth-child(6):before
+		background-image: url(../img/benefits/dosvid.png)
+
+.benefits__content
+	margin: 0
+	font-size: 18px
+	line-height: 22px
+	position: relative
+	z-index: 2
+	margin-top: 251px
+	padding-top: 50px
+	&:after
+		content: ""
+		width: 100%
+		height: 1px
+		background: $grau
+		position: absolute
+		top: 17px
+		left: 0
+		z-index: 0
+	.fas
+		position: absolute
+		top: 0
+		left: 50%
+		transform: translateX(-50%)
+		font-size: 22px
+		line-height: 22px
+		display: inline-block
+		border: solid 2px $grau
+		border-radius: 100px
+		padding: 5px
+		background: #45d35a
+		color: #fff
+		z-index: 1
+
+.benefits__callback
+	margin-top: 40px
+	
+ 
+.reviews
+	text-align: center
+	padding-top: 50px
+	padding-bottom: 50px
+	&__title
+		font-size: 1.5em
+		line-height: 1.65
+
+.reviews__list
+	margin-top: 40px
+
+.reviews__item
+	padding: 20px
+	list-style: none
+	
+	p
+		margin: 20px 150px
+	
+.reviews__review
+	position: relative
+	&:before
+		content: ",,"
+		width: 30px
+		height: 30px
+		color: $accent
+		font-size: 70px
+		font-family: 'Times New Roman',serif
+		position: absolute
+		top: 44px
+		left: -34px
+		transform: rotate(180deg)
+	&:after
+		content: ",,"
+		width: 30px
+		height: 30px
+		color: $accent
+		font-size: 70px
+		font-family: 'Times New Roman',serif
+		position: absolute
+		top: 44px
+		right: -34px	
+
+.reviews__foto
+	margin-bottom: 50px
+	.hexagon-review
+		left: 50%
+		transform: translateX(-50%)
+
+.reviews__callback
+	margin-top: 40px
+	.logo__img
+		border: none
+	.callback__btn
+		top: -22px
+.feedback
+	background: url("../img/header/fon-header_1.jpg") #B8CACE
+	background-repeat: no-repeat
+	background-position: center
+	background-attachment: fixed
+	background-size: auto
+	padding: 50px 0 
+	padding-bottom: 200px
+	position: relative
+
+.feedback__phone-item
+	text-decoration: none
+	color: #fff
+	&:hover
+		color: $accent
+		text-decoration: none
+	
+.feedback__title
+	text-align: center
+	display: block
+	width: 100%
+	font-size: 1.5em
+	line-height: 1.65
+	margin-bottom: 40px
+
+.form
+	background: hsla(0, 1%, 24%, .75)
+	margin: auto
+	padding: 20px 30px 20px 30px
+	outline: 2px $accent dashed
+	outline-offset: -10px
+	position: relative
+	label,input
+		width: 100%
+		margin: 0
+	.form__name-wrapper,
+	.form__tel-wrapper,
+	.form__email-wrapper
+		font-size: 16px
+		position: absolute
+		left: 0
+		padding-left: 30px
+		margin-top: 7px
+		color: #fff
+		transition: color 0.3s
+	input:not(.form__btn)
+		margin-top: 30px
+		padding-left: 15px
+		padding-right: 15px
+		font-size: 16px
+		line-height: 22px
+		padding-top: 5px
+		padding-bottom: 5px
+	.form__name,
+	.form__tel,
+	.form__email
+		box-sizing: border-box
+		background: hsla(0, 1%, 24%, .95)
+		border: 1px solid $accent
+		color: #fff
+		border-radius: 3px
+	.form__btn
+		margin-top: 15px
+		background: $accent
+		color: #fff
+		&:hover
+			color: $grau
+.form__name:focus ~ label.form__name-wrapper
+	color: $accent
+.form__tel:focus ~ label.form__tel-wrapper
+	color: $accent
+.form__email:focus ~ label.form__email-wrapper
+	color: $accent
+.form__promo
+	color: #fff
+	text-align: center
+	font-size: 16px
+	margin: 0
+	.accent-text
+		display: block
+		font-size: 20px
+.form__footer
+	font-size: 14px
+	text-align: center
+	margin: 0
+	padding: 0
+	margin-top: 20px
+	color: $grau
+		/* style */	
+	//	footer
+.main-footer
+	position: relative
+	bottom: 0
+	left: 0
+	background-color: hsla(0, 1%, 24%, .75)
+	width: 100%
+	color: #fff
+	padding: 20px 0
+	
+	&__logo,
+	&__phonebox
+		display: flex
+		flex-shrink: 0
+		justify-content: space-between
+		margin: auto
+		align-items: flex-start
+		flex-wrap: wrap
+
+.main-footer__phone-items,
+.main-footer__btn,
+.logo__img
+	margin: auto
+.main-footer__phone-item
+	text-decoration: none
+	color: #fff
+	&:hover
+		color: $accent
+		text-decoration: none
+.main-footer__phone-items
+	text-align: center
+	
+//owl-carousel
+.owl-carousel .owl-dots.disabled
+	display: block
+
+.owl-carousel .owl-dot
+	background: #000
+
+.owl-dots
+	width: 100%
+	text-align: center
+	margin-top: 0
+	.owl-dot
+		width: 8px
+		height: 8px
+		background-color: #999
+		border-radius: 10em
+		display: inline-block
+		margin: 4px
+		transition: background-color .25s ease, transform .25s ease
+		
+		&.active
+			background-color: $accent
+			transform: scale(1.3)
+			border: none
+
+
+		//	modal windows
+.overley
+	width: 100%
+	height: 100%
+	position: fixed
+	top: 0
+	left: 0
+	background: darken(rgba(62,61,61,.9), 15)
+	z-index: 101
+	display: none
+	cursor: pointer
+
+.o-show
+	display: block
+
+.modal-form
+	position: fixed
+	width: 700px
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	z-index: 102
+	background:  rgba(62,61,61,.85) url("../img/modal/modal_fon_man.png")
+	background-repeat: no-repeat
+	background-size: 50%
+	background-position: bottom left
+	box-shadow: 6px 5px 20px -1px rgba(0,0,0,0.75)
+	display: none
+
+	.modal-form__form
+		width: 350px
+		margin: 0
+		margin-left: auto
+
+	.modal-form__btn
+		position: absolute
+		top: 8px
+		right: -3px
+		z-index: 100
+		padding-bottom: 50px
+		padding-left: 50px
+
+.modal-form__phone
+	text-decoration: none
+	color: #fff
+	&:hover
+		color: $accent
+		text-decoration: none
+
+.modal-show
+	display: flex
+	animation: zoomIn 0.6s
+	opacity: 1
+.modal-none
+	opacity: 0
+	transition: display 0.5s
+	display: none
+
+.page-galery
+	background: url("../img/header/fon-header_1.jpg") #B8CACE
+	background-repeat: no-repeat
+	background-position: center
+	background-attachment: fixed
+	background-size: auto
+	position: relative
+	
+	+inverse
+.main-header-galery
+	height: auto
+	min-height: auto
+	background: none
+	
+.content-galery__peryla
+	padding-bottom: 50px
+	padding-top: 0
+	
+	
+.content-galery__content,
+.content-galery__title
+	text-align: center
+	color: #fff
+.content-galery__title
+	text-transform: uppercase
+	padding-top: 20px
+.fotorama
+	background: $dark
+	
+	
+.fotorama
+	&__nav
+		display: none
+		&-wrap
+			width: 100%
+			padding: 0 10px
+			position: absolute
+			bottom: 10px
+	&__thumb
+		border: 3px solid #fff
+		box-sizing: border-box
+		&-border
+			border-color: $accent
+.fotorama__arr
+	
+	&::before
+		color: lighten($accent, 10)
+
+.fotorama__arr--prev::before
+	content: "\f053"
+	font-family: fontawesome
+	font-size: 20px	
+	width: 32px
+	height: 32px
+	
+.fotorama__arr--next::before
+	content: "\f054"
+	font-family: fontawesome
+	font-size: 20px	
+	width: 32px
+	height: 32px
+	
+	
+.top
+	position: fixed
+	bottom: 25px
+	background-color: darken(#E0E0E0, 20)
+	border-radius: 10em
+	color: darken(#666, 10)
+	font-size: 26px
+	width: 50px
+	height: 50px
+	line-height: 50px
+	text-align: center
+	cursor: pointer
+	transition: all .25s ease
+	right: -100px
+	z-index: 12
+	opacity: .5
+	&.active
+		right: 30px
+	i
+		line-height: 0
+	&:hover
+		color: #fff
+		background-color: $accent
+		opacity: 1
+
+.preloader
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	background-color: darken(rgba(62,61,61, 1), 10)
+	z-index: 100
+@mixin opacity($opacity)
+	opacity: $opacity / 100
+	filter: alpha(opacity=$opacity)
+.pulse
+	position: relative
+	left: 50%
+	top: 50vh
+	margin:
+		left: -40px
+		top: -40px
+	&:before, &:after
+		content: ''
+		border: 5px solid lighten(#323232, 20)
+		width: 80px
+		height: 80px
+		border-radius: 500px
+		position: absolute
+	&:before
+		animation: pulse-outer .8s ease-in infinite
+	&:after
+		animation: pulse-inner .8s linear infinite
+
+@keyframes pulse-outer
+	0%
+		@include opacity(100)
+	50%
+		@include opacity(50)
+	100%
+		@include opacity(0)
+
+@keyframes pulse-inner
+	0%
+		transform: scale(0)
+		@include opacity(0)
+	100%
+		transform: scale(1)
+		@include opacity(100)
+
+.content-galery__fotorama
+	margin-bottom: 220px
+	
+
+@import "media" // Always at the end
